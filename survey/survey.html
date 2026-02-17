@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Feedback Survey</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="survey-card">
+            <h1>College Event Feedback</h1>
+            <p class="description">Help us improve by filling this quick survey.</p>
+            
+            <form id="surveyForm">
+                <div class="form-s">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-mess" id="nameError"></span>
+                </div>
+                
+                <div class="form-s">
+                    <label for="rating">Rating (1-5)</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span class="error-mess" id="ratingError"></span>
+                </div>
+                
+                <div class="form-s">
+                    <label for="feedback">Feedback</label>
+                    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                    <span class="error-mess" id="feedbackError"></span>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+            
+            <div id="thankYouMessage" class="thank-you-mess" style="display: none;">
+                <h2>Thank you for your feedback!</h2>
+                <p>We appreciate you taking the time to share your thoughts with us.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="survey.js"></script>
+</body>
+</html>
